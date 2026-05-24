@@ -82,4 +82,19 @@ class IntContainerTest {
         assertEquals(20, container.get(0));
         assertEquals(30, container.get(1));
     }
+
+    @Test
+    void containsReturnsTrueForExistingElement() {
+        container.add(5);
+        container.add(99);
+        assertTrue(container.contains(5));
+        assertTrue(container.contains(99));
+    }
+
+    @Test
+    void containsReturnsFalseForMissingElement() {
+        container.add(1);
+        assertFalse(container.contains(42));
+        assertFalse(container.contains(0));
+    }
 }

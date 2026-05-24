@@ -80,6 +80,20 @@ public class IntContainer {
     }
 
     /**
+     * Returns {@code true} if the container contains at least one element
+     * equal to {@code value}.
+     *
+     * @param value the integer to search for
+     * @return {@code true} if found
+     */
+    public boolean contains(int value) {
+        for (int i = 0; i < size; i++) {
+            if (data[i] == value) return true;
+        }
+        return false;
+    }
+
+    /**
      * Returns a string representation of the container, e.g. {@code [1, 2, 3]}.
      *
      * @return string representation
